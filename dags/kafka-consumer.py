@@ -10,8 +10,11 @@ def consume_messages():
         'bootstrap.servers': 'kafka:9092',  # Kafka 브로커 주소
         'group.id': 'my_group',                  # 소비자 그룹 ID
         'auto.offset.reset': 'earliest'          # 처음부터 읽기
+        'security.protocol': 'SASL_PLAINTEXT',
+        'sasl.mechanism': 'PLAIN',
+        'sasl.username': 'user1',    # Kafka 사용자 이름
+        'sasl.password': 'CsEQop2MAA'     # Kafka 비밀번호
     }
-    
     # 소비자 생성
     consumer = Consumer(conf)
     
