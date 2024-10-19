@@ -22,9 +22,9 @@ def consume_messages():
     topic = 'my_topic'
     consumer.subscribe([topic])
     
-    # 메시지를 소비하는 루프 (예: 5초 동안 메시지를 소비)
+    # 메시지를 소비하는 루프 (예: 30초 동안 메시지를 소비)
     try:
-        for _ in range(5):  # 5번 반복
+        for _ in range(30):  # 30번 반복
             msg = consumer.poll(1.0)  # 1초 대기
             if msg is None:
                 continue
